@@ -2,7 +2,7 @@ istio: true
 questions:
 - variable: host
   default: ""
-  type: string
+  type: istiohost
   description: "Please select a service in the namespace"
   label: Target Host
   group: "Host Option"
