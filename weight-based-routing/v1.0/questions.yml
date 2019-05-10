@@ -1,0 +1,36 @@
+namespace: default
+questions:
+- variable: host
+  default: ""
+  type: string
+  label: Target Host
+  group: "Host Option"
+  required: true
+- variable: currentVersion
+  default: "v1"
+  type: string
+  label: Version
+  group: "Current Version"
+  required: true
+- variable: currentVersionWeight
+  default: 100
+  description: "How many percent of traffic will send to to current version"
+  type: int
+  min: 0
+  max: 100
+  label: Weight
+  group: "Current Version"
+- variable: newVersion
+  default: "v2"
+  type: string
+  label: Version
+  group: "New Version"
+  required: true
+- variable: newVersionWeight
+  default: 0
+  description: "How many percent of traffic will send to to new version"
+  type: int
+  min: 0
+  max: 100
+  label: Weight
+  group: "New Version"

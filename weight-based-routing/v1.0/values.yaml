@@ -1,0 +1,5 @@
+currentVersion: v1
+newVersion: v2
+host: review
+currentVersionWeight: 100
+newVersionWeight: 0
