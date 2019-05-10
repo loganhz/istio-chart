@@ -1,3 +1,4 @@
+istio: true
 questions:
 - variable: host
   default: ""
