@@ -3,16 +3,17 @@ questions:
 - variable: host
   default: ""
   type: string
+  description: "Please select a service in the namespace"
   label: Target Host
   group: "Host Option"
   required: true
-- variable: currentVersion
+- variable: current.version
   default: "v1"
   type: string
   label: Version
   group: "Current Version"
   required: true
-- variable: currentVersionWeight
+- variable: current.weight
   default: 100
   description: "How many percent of traffic will send to to current version"
   type: int
@@ -20,13 +21,13 @@ questions:
   max: 100
   label: Weight
   group: "Current Version"
-- variable: newVersion
+- variable: new.version
   default: "v2"
   type: string
   label: Version
   group: "New Version"
   required: true
-- variable: newVersionWeight
+- variable: new.weight
   default: 0
   description: "How many percent of traffic will send to to new version"
   type: int

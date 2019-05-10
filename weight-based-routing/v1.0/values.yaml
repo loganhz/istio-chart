@@ -1,5 +1,7 @@
-currentVersion: v1
-newVersion: v2
 host: review
-currentVersionWeight: 100
-newVersionWeight: 0
+current:
+  version: v1
+  weight: 100
+new:
+  version: v2
+  weight: 0
