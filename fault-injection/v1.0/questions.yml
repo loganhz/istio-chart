@@ -14,16 +14,16 @@ questions:
   label: Version
   group: "Version"
   required: true
-- variable: percent
-  default: 80
-  type: int
-  min: 0
-  max: 100
-  label: Weight
-  group: "Delay Injection Options"
 - variable: fixedDelay
   default: 7
   type: int
   label: Fixed Delay Seconds
   group: "Delay Injection Options"
   required: true
+- variable: percent
+  default: 80
+  type: int
+  min: 0
+  max: 100
+  label: Percent
+  group: "Delay Injection Options"
