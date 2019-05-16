@@ -8,31 +8,22 @@ questions:
   label: Target Host
   group: "Host Option"
   required: true
-- variable: current.version
+- variable: version
   default: "v1"
   type: string
   label: Version
-  group: "Current Version"
+  group: "Version"
   required: true
-- variable: current.weight
-  default: 100
-  description: "How many percent of traffic will send to to current version"
+- variable: percent
+  default: 80
   type: int
   min: 0
   max: 100
   label: Weight
-  group: "Current Version"
-- variable: new.version
-  default: "v2"
-  type: string
-  label: Version
-  group: "New Version"
-  required: true
-- variable: new.weight
-  default: 0
-  description: "How many percent of traffic will send to to new version"
+  group: "Delay Injection Options"
+- variable: fixedDelay
+  default: 7
   type: int
-  min: 0
-  max: 100
-  label: Weight
-  group: "New Version"
+  label: Fixed Delay Seconds
+  group: "Delay Injection Options"
+  required: true

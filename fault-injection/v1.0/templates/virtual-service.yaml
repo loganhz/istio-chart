@@ -6,12 +6,11 @@ spec:
   hosts:
     - {{ .Values.host }}
   http:
-  - route:
+  - fault:
+      delay:
+        fixedDelay: {{ .Values.fixedDelay }}s
+        percent: {{ .Values.percent }}
+    route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
-      weight: {{ .Values.current.weight }}
-    - destination:
-        host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
-      weight: {{ .Values.new.weight }}
+        subset: {{ .Values.version }}
