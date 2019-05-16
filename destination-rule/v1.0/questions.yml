@@ -14,25 +14,9 @@ questions:
   label: Version
   group: "Current Version"
   required: true
-- variable: current.weight
-  default: 100
-  description: "How many percent of traffic will send to to current version"
-  type: int
-  min: 0
-  max: 100
-  label: Weight
-  group: "Current Version"
 - variable: new.version
   default: "v2"
   type: string
   label: Version
   group: "New Version"
   required: true
-- variable: new.weight
-  default: 0
-  description: "How many percent of traffic will send to to new version"
-  type: int
-  min: 0
-  max: 100
-  label: Weight
-  group: "New Version"
