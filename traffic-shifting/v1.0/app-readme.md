@@ -1,4 +1,4 @@
-# Apply weight-based routing
+# Traffic Shifting
 
 You can use this chart to gradually migrate traffic from one version of a microservice to another. For example, you might migrate traffic from an older version to a new version.
 
