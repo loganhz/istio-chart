@@ -1,7 +1,5 @@
 host: review
 current:
   version: v1
-  weight: 100
 new:
   version: v2
-  weight: 0

@@ -1,1 +1,0 @@
-Please go to kiali UI or use kubectl to check the destination rule and virtual service.
