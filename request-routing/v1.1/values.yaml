@@ -1,5 +1,9 @@
 host: review
-user: jason
-cookie: username
+key: username
+value: jason
+current:
+  version: v1
+  weight: 100
 new:
   version: v2
+  weight: 0
