@@ -8,13 +8,9 @@ spec:
   http:
   - match:
     - headers:
-        {{ .Values.header }}:
-          exact: {{ .Values.user }}
+        cookie:
+          regex: "^(.*?;)?({{ .Values.key }}={{ .Values.value }})(;.*)?$"
     route:
     - destination:
         host: {{ .Values.host }}
         subset: {{ .Values.new.version }}
-  - route:
-    - destination:
-        host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}

@@ -1,7 +1,5 @@
 host: review
 user: jason
-header: end-user
-current:
-  version: v1
+cookie: username
 new:
   version: v2

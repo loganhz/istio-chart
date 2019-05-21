@@ -8,27 +8,21 @@ questions:
   label: Target Host
   group: "Host Option"
   required: true
-- variable: current.version
-  default: "v1"
-  type: string
-  label: Version
-  group: "Current Version"
-  required: true
 - variable: new.version
   default: "v2"
   type: string
   label: Version
   group: "New Version"
   required: true
-- variable: header
-  default: "end-user"
+- variable: key
+  default: "username"
   type: string
-  label: HTTP Header
+  label: Cookie Key
   group: "New Version"
   required: true
-- variable: user
+- variable: value
   default: "jason"
   type: string
-  label: Username
+  label: Cookie Value
   group: "New Version"
   required: true
