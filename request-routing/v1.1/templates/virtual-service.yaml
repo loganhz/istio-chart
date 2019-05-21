@@ -9,7 +9,7 @@ spec:
   - match:
     - headers:
         cookie:
-          regex: "^(.*?;)?({{ .Values.key }}={{ .Values.value }})(;.*)?$"
+          regex: "^(.*?;)?({{ .Values.cookie }})(;.*)?$"
     route:
     - destination:
         host: {{ .Values.host }}
