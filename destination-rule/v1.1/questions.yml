@@ -14,3 +14,9 @@ questions:
   label: Version
   group: "Current Version"
   required: true
+- variable: new.version
+  default: "v2"
+  type: string
+  label: Version
+  group: "New Version"
+  required: true
