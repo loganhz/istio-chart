@@ -13,8 +13,8 @@ spec:
     route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
+        subset: {{ .Values.new.version }}
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
+        subset: {{ .Values.current.version }}
