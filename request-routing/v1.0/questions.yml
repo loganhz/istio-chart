@@ -20,10 +20,15 @@ questions:
   label: Version
   group: "New Version"
   required: true
+- variable: header
+  default: "end-user"
+  type: string
+  label: HTTP Header
+  group: "New Version"
+  required: true
 - variable: user
   default: "jason"
   type: string
-  label: Tester Login Name
-  description: Only the HTTP request has end-user header equals this filed can access to the new version.
+  label: Username
   group: "New Version"
   required: true
