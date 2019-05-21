@@ -14,7 +14,7 @@ questions:
   label: Version
   group: "Version Options"
   required: true
-- variable: tiemout
+- variable: timeout
   default: 1.5
   type: float
   label: Timeout Seconds
