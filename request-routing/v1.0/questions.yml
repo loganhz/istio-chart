@@ -1,0 +1,29 @@
+labels:
+  io.rancher.istio: true
+questions:
+- variable: host
+  default: ""
+  type: istiohost
+  description: "Please select a service in the namespace"
+  label: Target Host
+  group: "Host Option"
+  required: true
+- variable: current.version
+  default: "v1"
+  type: string
+  label: Version
+  group: "Current Version"
+  required: true
+- variable: new.version
+  default: "v2"
+  type: string
+  label: Version
+  group: "New Version"
+  required: true
+- variable: user
+  default: "jason"
+  type: string
+  label: Tester Login Name
+  description: Only the HTTP request has end-user header equals this filed can access to the new version.
+  group: "New Version"
+  required: true
