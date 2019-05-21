@@ -10,7 +10,7 @@ spec:
         maxConnections: {{ .Values.maxConnections }}
       http:
         http1MaxPendingRequests: {{ .Values.http1MaxPendingRequests }}
-        http2MaxPendingRequests: {{ .Values.http2MaxPendingRequests }}
+        http2MaxRequests: {{ .Values.http2MaxRequests }}
         maxRequestsPerConnection: {{ .Values.maxRequestsPerConnection }}
     outlierDetection:
       consecutiveErrors: {{ .Values.consecutiveErrors }}

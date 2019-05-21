@@ -20,10 +20,10 @@ questions:
   label: Http1 Max Pending Requests
   group: "HTTP Options"
   required: true
-- variable: http2MaxPendingRequests
+- variable: http2MaxRequests
   default: 1
   type: int
-  label: Http2 Max Pending Requests
+  label: Http2 Max Requests
   group: "HTTP Options"
   required: true
 - variable: maxRequestsPerConnection
