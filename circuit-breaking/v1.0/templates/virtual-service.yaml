@@ -1,17 +1,19 @@
 apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
+kind: DestinationRule
 metadata:
   name: {{ template "circuit-breaking.fullname" . }}
 spec:
-  hosts:
-    - {{ .Values.host }}
-  http:
-  - route:
-    - destination:
-        host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
-      weight: {{ .Values.current.weight }}
-    - destination:
-        host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
-      weight: {{ .Values.new.weight }}
+  host: {{ .Values.host }}
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: {{ .Values.maxConnections }}
+      http:
+        http1MaxPendingRequests: {{ .Values.http1MaxPendingRequests }}
+        http2MaxPendingRequests: {{ .Values.http2MaxPendingRequests }}
+        maxRequestsPerConnection: {{ .Values.maxRequestsPerConnection }}
+    outlierDetection:
+      consecutiveErrors: {{ .Values.consecutiveErrors }}
+      interval: {{ .Values.interval }}s
+      baseEjectionTime: {{ .Values.baseEjectionTime }}s
+      maxEjectionPercent: {{ .Values.maxEjectionPercent }}
