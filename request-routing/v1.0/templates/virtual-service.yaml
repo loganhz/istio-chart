@@ -8,7 +8,7 @@ spec:
   http:
   - match:
     - headers:
-        end-user:
+        {{ .Values.user }}:
           exact: {{ .Values.user }}
     route:
     - destination:
