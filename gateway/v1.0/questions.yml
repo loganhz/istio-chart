@@ -45,6 +45,6 @@ questions:
 - variable: new.requestHost
   default: "canary.myapp.example.com"
   type: string
-  label: Request Host
+  label: Canary Request Host
   group: "New Version"
   required: true
