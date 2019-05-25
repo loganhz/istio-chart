@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ template "secure-gateway.fullname" . }}-vs
+spec:
+  hosts:
+  - "{{ .Values.master.requestHost }}"
+  gateways:
+  - {{ template "secure-gateway.fullname" . }}
+  http:
+  - route:
+    - destination:
+        host: {{ .Values.host }}
+        subset: {{ .Values.master.version }}

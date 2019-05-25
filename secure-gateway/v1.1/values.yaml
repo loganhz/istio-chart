@@ -1,0 +1,9 @@
+host: review
+master:
+  version: v1
+  weight: 100
+  requestHost: myapp.example.com
+canary:
+  version: v2
+  weight: 0
+  requestHost: canary.myapp.example.com

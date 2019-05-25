@@ -1,0 +1,22 @@
+labels:
+  io.rancher.istio: true
+questions:
+- variable: host
+  default: ""
+  type: istiohost
+  description: "Please select a service in the namespace"
+  label: Target Host
+  group: "Host Option"
+  required: true
+- variable: master.version
+  default: "v1"
+  type: string
+  label: Version
+  group: "Master Version"
+  required: true
+- variable: master.requestHost
+  default: "myapp.example.com"
+  type: string
+  label: Request Host
+  group: "Master Version"
+  required: true

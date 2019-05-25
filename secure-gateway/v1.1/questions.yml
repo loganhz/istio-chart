@@ -1,0 +1,50 @@
+labels:
+  io.rancher.istio: true
+questions:
+- variable: host
+  default: ""
+  type: istiohost
+  description: "Please select a service in the namespace"
+  label: Target Host
+  group: "Host Option"
+  required: true
+- variable: master.version
+  default: "v1"
+  type: string
+  label: Version
+  group: "Master Version"
+  required: true
+- variable: master.weight
+  default: 100
+  description: "How many percent of traffic will send to to master version"
+  type: int
+  min: 0
+  max: 100
+  label: Weight
+  group: "Master Version"
+- variable: master.requestHost
+  default: "myapp.example.com"
+  type: string
+  label: Request Host
+  group: "Master Version"
+  required: true
+- variable: canary.version
+  default: "v2"
+  type: string
+  label: Version
+  group: "Canary Version"
+  required: true
+- variable: canary.weight
+  default: 0
+  description: "How many percent of traffic will send to to canary version"
+  type: int
+  min: 0
+  max: 100
+  label: Weight
+  group: "Canary Version"
+- variable: canary.requestHost
+  default: "canary.myapp.example.com"
+  type: string
+  label: Canary Request Host
+  group: "Canary Version"
+  required: true
