@@ -23,12 +23,11 @@ questions:
   label: Weight
   group: "Current Version"
 - variable: current.requestHost
-  default: ""
+  default: "myapp.example.com"
   type: string
   label: Request Host
   group: "Current Version"
   required: true
-  placeholder: "e.g. myapp.example.com"
 - variable: new.version
   default: "v2"
   type: string
@@ -44,9 +43,8 @@ questions:
   label: Weight
   group: "New Version"
 - variable: new.requestHost
-  default: ""
+  default: "canary.myapp.example.com"
   type: string
   label: Request Host
   group: "New Version"
   required: true
-  placeholder: "e.g. new.myapp.example.com"
