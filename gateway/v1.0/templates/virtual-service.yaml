@@ -4,12 +4,11 @@ metadata:
   name: {{ template "gateway.fullname" . }}-vs
 spec:
   hosts:
-  - "{{ .Values.current.requestHost }}"
+  - "{{ .Values.master.requestHost }}"
   gateways:
   - {{ template "gateway.fullname" . }}
   http:
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
-      weight: {{ .Values.current.weight }}
+        subset: {{ .Values.master.version }}

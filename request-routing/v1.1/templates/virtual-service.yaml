@@ -13,7 +13,7 @@ spec:
     route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
+        subset: {{ .Values.canary.version }}
   - route:
     - destination:
         host: {{ .Values.host }}
@@ -21,5 +21,5 @@ spec:
       weight: {{ .Values.current.weight }}
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
-      weight: {{ .Values.new.weight }}
+        subset: {{ .Values.canary.version }}
+      weight: {{ .Values.canary.weight }}

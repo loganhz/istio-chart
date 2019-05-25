@@ -1,5 +1,5 @@
 host: review
 user: jason
 header: end-user
-new:
+canary:
   version: v2

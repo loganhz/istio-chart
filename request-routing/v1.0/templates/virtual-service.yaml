@@ -6,11 +6,7 @@ spec:
   hosts:
   - {{ .Values.host }}
   http:
-  - match:
-    - headers:
-        {{ .Values.header }}:
-          exact: {{ .Values.user }}
-    route:
+  - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
+        subset: {{ .Values.current.version }}

@@ -8,23 +8,15 @@ questions:
   label: Target Host
   group: "Host Option"
   required: true
-- variable: current.version
+- variable: master.version
   default: "v1"
   type: string
   label: Version
-  group: "Current Version"
+  group: "Master Version"
   required: true
-- variable: current.weight
-  default: 100
-  description: "How many percent of traffic will send to to current version"
-  type: int
-  min: 0
-  max: 100
-  label: Weight
-  group: "Current Version"
-- variable: current.requestHost
+- variable: master.requestHost
   default: "myapp.example.com"
   type: string
   label: Request Host
-  group: "Current Version"
+  group: "Master Version"
   required: true

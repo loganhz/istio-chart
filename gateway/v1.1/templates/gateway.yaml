@@ -11,5 +11,5 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "{{ .Values.current.requestHost }}"
-    - "{{ .Values.new.requestHost }}"
+    - "{{ .Values.master.requestHost }}"
+    - "{{ .Values.canary.requestHost }}"

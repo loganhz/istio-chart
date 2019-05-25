@@ -4,24 +4,24 @@ metadata:
   name: {{ template "gateway.fullname" . }}-vs
 spec:
   hosts:
-  - "{{ .Values.current.requestHost }}"
-  - "{{ .Values.new.requestHost }}"
+  - "{{ .Values.master.requestHost }}"
+  - "{{ .Values.canary.requestHost }}"
   gateways:
   - {{ template "gateway.fullname" . }}
   http:
   - match:
     - authority:
-        exact: {{ .Values.new.requestHost }}
+        exact: {{ .Values.canary.requestHost }}
     route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
+        subset: {{ .Values.canary.version }}
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
-      weight: {{ .Values.current.weight }}
+        subset: {{ .Values.master.version }}
+      weight: {{ .Values.master.weight }}
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.new.version }}
-      weight: {{ .Values.new.weight }}
+        subset: {{ .Values.canary.version }}
+      weight: {{ .Values.canary.weight }}

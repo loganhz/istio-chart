@@ -8,6 +8,6 @@ spec:
   - name: {{ .Values.current.version }}
     labels:
       version: {{ .Values.current.version }}
-  - name: {{ .Values.new.version }}
+  - name: {{ .Values.canary.version }}
     labels:
-      version: {{ .Values.new.version }}
+      version: {{ .Values.canary.version }}

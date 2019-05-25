@@ -2,6 +2,6 @@ host: review
 current:
   version: v1
   weight: 100
-new:
+canary:
   version: v2
   weight: 0

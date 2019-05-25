@@ -12,7 +12,7 @@ questions:
   default: "v1"
   type: string
   label: Version
-  group: "Current Version"
+  group: "Master Version"
   required: true
 - variable: mirror.version
   default: "v2"

@@ -12,7 +12,7 @@ questions:
   default: "v1"
   type: string
   label: Version
-  group: "Current Version"
+  group: "Master Version"
   required: true
 - variable: current.weight
   default: 100
@@ -21,25 +21,25 @@ questions:
   min: 0
   max: 100
   label: Weight
-  group: "Current Version"
-- variable: new.version
+  group: "Master Version"
+- variable: canary.version
   default: "v2"
   type: string
   label: Version
-  group: "New Version"
+  group: "Canary Version"
   required: true
-- variable: new.weight
+- variable: canary.weight
   default: 0
-  description: "How many percent of traffic will send to to new version"
+  description: "How many percent of traffic will send to to canary version"
   type: int
   min: 0
   max: 100
   label: Weight
-  group: "New Version"
+  group: "Canary Version"
 - variable: cookie
   default: "username=jason"
   type: string
   label: Canary Cookie
-  group: "New Version"
-  description: "Users will be able to use the new version if cookie contains this value."
+  group: "Canary Version"
+  description: "Users will be able to use the canary version if cookie contains this value."
   required: true

@@ -1,5 +1,5 @@
 host: review
 current:
   version: v1
-new:
+canary:
   version: v2
