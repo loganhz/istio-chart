@@ -28,3 +28,23 @@ questions:
   label: Request Host
   group: "Current Version"
   required: true
+- variable: new.version
+  default: "v2"
+  type: string
+  label: Version
+  group: "New Version"
+  required: true
+- variable: new.weight
+  default: 0
+  description: "How many percent of traffic will send to to new version"
+  type: int
+  min: 0
+  max: 100
+  label: Weight
+  group: "New Version"
+- variable: new.requestHost
+  default: "canary.myapp.example.com"
+  type: string
+  label: Canary Request Host
+  group: "New Version"
+  required: true
