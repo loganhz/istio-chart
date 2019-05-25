@@ -47,6 +47,6 @@ questions:
   default: ""
   type: string
   label: Request Host
-  group: "Current Version"
+  group: "New Version"
   required: true
   placeholder: "e.g. new.myapp.example.com"
