@@ -8,21 +8,9 @@ questions:
   label: Target Host
   group: "Host Option"
   required: true
-- variable: canary.version
+- variable: master.version
   default: "v2"
   type: string
   label: Version
-  group: "Canary Version"
-  required: true
-- variable: header
-  default: "end-user"
-  type: string
-  label: HTTP Header
-  group: "Canary Version"
-  required: true
-- variable: user
-  default: "jason"
-  type: string
-  label: Username
-  group: "Canary Version"
+  group: "Master Version"
   required: true

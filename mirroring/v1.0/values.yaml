@@ -1,7 +1,5 @@
 host: review
 master:
   version: v1
-  weight: 100
-canary:
+mirror:
   version: v2
-  weight: 0

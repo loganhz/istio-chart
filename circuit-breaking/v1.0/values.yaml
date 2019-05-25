@@ -1,7 +1,9 @@
 host: review
-master:
-  version: v1
-  weight: 100
-canary:
-  version: v2
-  weight: 0
+maxConnections: 1
+http1MaxPendingRequests: 1
+http2MaxRequests: 1
+maxRequestsPerConnection: 1
+consecutiveErrors: 1
+interval: 1
+baseEjectionTime: 180
+maxEjectionPercent: 100

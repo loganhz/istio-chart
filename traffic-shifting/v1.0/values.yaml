@@ -1,5 +1,3 @@
 host: review
-user: jason
-header: end-user
-canary:
+master:
   version: v2

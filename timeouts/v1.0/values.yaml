@@ -1,7 +1,3 @@
 host: review
-master:
-  version: v1
-  weight: 100
-canary:
-  version: v2
-  weight: 0
+version: v1
+timeout: 1.5
