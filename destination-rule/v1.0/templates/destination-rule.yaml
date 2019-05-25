@@ -5,6 +5,6 @@ metadata:
 spec:
   host: {{ .Values.host }}
   subsets:
-  - name: {{ .Values.current.version }}
+  - name: {{ .Values.master.version }}
     labels:
-      version: {{ .Values.current.version }}
+      version: {{ .Values.master.version }}

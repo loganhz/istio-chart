@@ -9,8 +9,8 @@ spec:
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
-      weight: {{ .Values.current.weight }}
+        subset: {{ .Values.master.version }}
+      weight: {{ .Values.master.weight }}
     - destination:
         host: {{ .Values.host }}
         subset: {{ .Values.canary.version }}

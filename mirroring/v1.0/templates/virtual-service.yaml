@@ -9,7 +9,7 @@ spec:
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
+        subset: {{ .Values.master.version }}
       weight: 100
     mirror:
       host: {{ .Values.host }}

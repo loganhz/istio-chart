@@ -8,7 +8,7 @@ questions:
   label: Target Host
   group: "Host Option"
   required: true
-- variable: current.version
+- variable: master.version
   default: "v1"
   type: string
   label: Version

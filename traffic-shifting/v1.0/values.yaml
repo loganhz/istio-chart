@@ -1,5 +1,5 @@
 host: review
-current:
+master:
   version: v1
   weight: 100
 canary:

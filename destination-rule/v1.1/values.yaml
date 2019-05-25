@@ -1,5 +1,5 @@
 host: review
-current:
+master:
   version: v1
 canary:
   version: v2

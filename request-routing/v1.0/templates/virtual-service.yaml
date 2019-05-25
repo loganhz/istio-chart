@@ -9,4 +9,4 @@ spec:
   - route:
     - destination:
         host: {{ .Values.host }}
-        subset: {{ .Values.current.version }}
+        subset: {{ .Values.master.version }}

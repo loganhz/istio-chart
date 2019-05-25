@@ -1,6 +1,6 @@
 host: review
 cookie: username=jason
-current:
+master:
   version: v1
   weight: 100
 canary:
