@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: {{ template "mirroring.fullname" . }}
+spec:
+  host: {{ .Values.host }}
+  subsets:
+  - name: {{ .Values.master.version }}
+    labels:
+      version: {{ .Values.master.version }}
+  - name: {{ .Values.mirror.version }}
+    labels:
+      version: {{ .Values.mirror.version }}

@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: {{ template "traffic-shifting.fullname" . }}
+spec:
+  host: {{ .Values.host }}
+  subsets:
+  - name: {{ .Values.master.version }}
+    labels:
+      version: {{ .Values.master.version }}
+  - name: {{ .Values.canary.version }}
+    labels:
+      version: {{ .Values.canary.version }}

@@ -1,0 +1,10 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: {{ template "fault-injection.fullname" . }}
+spec:
+  host: {{ .Values.host }}
+  subsets:
+  - name: {{ .Values.version }}
+    labels:
+      version: {{ .Values.version }}
